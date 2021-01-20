@@ -1,0 +1,3 @@
+*Tandem* is a typeface influenced by newspaper types and hierarchical compositions. *Tandem* has multiple voices to fit a variety of roles on a spread. A sober type by necessity; it captures a classical look.
+
+The *Roman* combines the styles of the two distinctly different italics: the *Strict Italic,* a conventional expansion type, and the *Casual Italic,* an expressive translational type. This gives *Tandem* a wide range of styles, with opposing voices. *Tandem* also includes two contrasting headline styles as well as a *Roman Ultra Condensed* for big titles.

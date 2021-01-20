@@ -1,0 +1,286 @@
+/* general Text Styles */
+
+h1,
+h3 {
+    font-family: 'Obviously Narrow';
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.3em;
+}
+
+h2,
+h4 {
+    font-family: 'Obviously Regular';
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.4em;
+}
+
+em {
+    font-family: 'Obviously Regular';
+    font-style: italic;
+}
+
+p, ul {
+	line-height: 1.6em;
+	margin-bottom: 0.7rem;
+}
+
+ul {
+	/*list-style: none;*/
+	margin-bottom: 0.7rem;
+	margin-left: 1rem;
+	list-style-position: outside;
+}
+
+/*ul > li::before {
+	content: "–";
+	margin-right: 0.7rem;
+}*/
+
+li {
+	margin-bottom: 0.3rem;
+}
+
+/* general Element Styles */
+
+picture,
+video {
+    width: 100%;
+}
+
+video {
+    height: 100%;
+}
+
+video.full-video {
+  display: none;
+}
+
+video.half-video {
+  display: block;
+}
+
+img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navigation */
+
+#project-navigator {
+    top: 0;
+    background-color: #eee;
+    position: absolute;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+#project-navigator:last-child {
+    border-bottom: solid 2px #000;
+}
+
+#project-navigator-wrapper {
+    margin-top: -2px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+#project-navigator-wrapper::after {
+    position: relative;
+    content: attr(data-current);
+    width: 100%;
+}
+
+#project-navigator-wrapper.clicked > #project-navigator {
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+#project-navigator-wrapper.clicked {
+    overflow: visible;
+    height: 100vh;
+}
+
+#project-navigator > a,
+#project-navigator-wrapper::after {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0.25rem 10px 0.4rem;
+    width: 100%;
+}
+
+#project-navigator > a:hover,
+#project-navigator > a.current,
+#project-navigator-wrapper::after {
+    border-top: #000 2px solid;
+    border-bottom: #000 2px solid;
+    background-color: #fff;
+    margin: -2px 0;
+}
+
+#project-navigator > a.current {
+    margin: 0;
+}
+
+#project-navigator > a:hover,
+#project-navigator > a.current,
+#project-navigator-wrapper:hover::after {
+    font-weight: bold;
+}
+
+#project-navigator-wrapper.clicked::after {
+    visibility: hidden;
+}
+
+#project-navigator-wrapper:not(.active) {
+    display: none;
+}
+
+#specimen {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    padding-top: var(--nav-bar-height);
+}
+
+#texts {
+    width: 40rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+#texts > div {
+    margin: 3rem 0;
+}
+
+#links {
+    margin-top: 1.5rem;
+}
+
+#links span {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+    font-weight: bold;
+}
+
+#process {
+    padding: 3rem 0;
+    position: relative;
+    width: 40rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.iframe-player {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.iframe-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#process > h4 {
+    margin-top: 1rem;
+}
+
+#process img,
+#process video,
+#process .video-player,
+#process .iframe-player {
+    display: block;
+    margin: 2rem auto;
+    background-color: #fff;
+}
+
+/* Media Queries */
+
+@media(orientation: landscape) {
+    .half {
+        width: 50%;
+    }
+}
+
+@media (max-height: 650px) {
+    #project-navigator-wrapper {
+        display: none;
+    }
+}
+
+@media(min-width: 600px) {
+    #project-navigator > a,
+    #project-navigator-wrapper::after {
+        padding: 0.25rem 20px 0.4rem;
+    }
+
+    #links span {
+        margin-right: 1rem;
+    }
+}
+
+@media(min-width: 767px) {
+    video.full-video {
+      display: block;
+    }
+    video.half-video {
+      display: none;
+    }
+}
+
+@media(min-width: 800px) {
+    #project-navigator > a,
+    #project-navigator-wrapper::after {
+        padding: 0.25rem 30px 0.4rem;
+    }
+}
+
+@media(min-width: 1000px) {
+
+    #texts {
+        width: 70rem;
+        display: flex;
+    }
+
+    #texts > div {
+        margin: 3.5rem 0;
+    }
+
+    #project-description {
+        width: 63%;
+        padding-right: 2rem;
+    }
+
+    #bio {
+        width: 36%;
+    }
+
+    h2 {
+        line-height: 2.7rem;
+        padding-top: 1.2rem;
+    }
+
+    #links span {
+        margin-right: .6rem;
+    }
+}

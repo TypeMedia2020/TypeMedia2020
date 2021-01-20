@@ -1,0 +1,3 @@
+*Gesto* is a type system that explores the expressiveness of a specific tool, the brush, while questioning the classic constructions of uppercase and lowercase. Two optical sizes represent the beating heart of the typeface: *Grande* and *Piccolo.* 
+ Thin entry and exit strokes combined with a low contrast characterize *Grande* by creating a sharp and dark texture with strong dynamism. Designed to work at huge sizes. 
+ *Piccolo,* on the other hand, translates these ingredients into text sizes, emphasizing features that must be visible at smaller scales, and filtering out anything that would create unnecessary noise. Taking inspiration from the Italian legacy, *Gesto* winks at a more contemporary aesthetic.

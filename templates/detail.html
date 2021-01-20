@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="type, typeface, font, {{bio['name']}}, {{bio['project']}}">
+    <link rel="stylesheet" type="text/css" href="../assets/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <link rel="stylesheet" type="text/css" href="../content.css">
+    <!-- <link rel="icon" href="data:;base64,iVBORw0KGgo="> -->
+    <title>{{bio["name"]}} – {{bio["project"]}}</title>
+    <link rel="icon" href="../assets/favicon/favicon_16.gif" sizes="16x16">
+    <link rel="icon" href="../assets/favicon/favicon_32.gif" sizes="32x32">
+    <link rel="icon" href="../assets/favicon/favicon_64.gif" sizes="64x64">
+    <link rel="icon" href="../assets/favicon/favicon_128.gif" sizes="128x128">
+    <link rel="icon" href="../assets/favicon/favicon_192.gif" sizes="192x192">
+    <link rel="shortcut icon" sizes="196x196" href="../assets/favicon/favicon_196.gif">
+    <link rel="apple-touch-icon" href="../assets/favicon/favicon_152.gif" sizes="152x152">
+    <link rel="apple-touch-icon" href="../assets/favicon/favicon_180.gif" sizes="180x180">
+</head>
+<body>
+    <header>
+        {{ header }}
+        <div id="project-navigator-wrapper">
+            <div id="project-navigator">
+                <!-- injected by script -->
+            </div>
+        </div>
+    </header>
+    <main>
+        {% if bio["header"] %}
+            <picture id="header-img">
+                {% if bio["headerMobile"] %}
+                    <source media="(orientation: portrait) and (max-width: 767px)" srcset="bio/{{bio['headerMobile']}}"/>
+                {% endif %}
+                <img src="bio/{{bio['header']}}" alt="{{bio['name']}}'s header">
+            </picture>
+        {% endif %}
+        <div id="texts">
+            <div id="project-description">
+                <h1>{{bio["project"]}}</h1>
+                {{aboutProject}} <!-- md rendered as p directly -->
+            </div>
+            <div id="bio">
+                <h2>{{bio["name"]}}</h2>
+                {{aboutStudent}} <!-- md rendered as p directly -->
+                <div id="links">
+                    {% if bio["website"] %}
+<!--                    ---><span><a href="https://{{bio['website']}}" target="_blank">Website</a></span>
+                    {% endif %}
+                    {% if bio["e-mail"] %}
+<!--                    ---><span><a href="mailto:{{bio['e-mail']}}">Email</a></span>
+                    {% endif %}
+                    {% if bio["instagram"] %}
+<!--                    ---><span><a href="https://instagram.com/{{bio['instagram']}}" target="_blank">Instagram</a></span>
+                    {% endif %}
+                    {% if bio["twitter"] %}
+<!--                    ---><span><a href="https://twitter.com/{{bio['twitter']}}" target="_blank">Twitter</a></span>
+                    {% endif %} 
+                </div>
+            </div>
+        </div>
+        <div id="specimen">
+            {% for entry in specimen %}
+                <picture class="{{ entry.className }}">
+                    <img src="{{ entry.url }}" alt="{{ entry.alt }}" loading="lazy">
+                </picture>
+            {% endfor %}
+    </div>
+        {% if process or bio['video_slug'] %}
+            <div id="process">
+            <h3>Process</h3>
+            {% if process %}
+                {% if process is string %}
+                    {{ process }}
+                {% else %}
+                    <p>
+                        {% for entry in process %}
+                            <img src="{{ entry.url }}" alt="{{ entry.alt }}" loading="lazy">
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            {% endif %} 
+            {% if bio['video_slug'] %}
+                <div class="iframe-player">
+                    <iframe src="https://player.vimeo.com/video/{{bio['video_slug']}}?title=0&byline=0&portrait=0&sidedock=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+                <p><a href="https://vimeo.com/{{bio['video_slug']}}">TM20: {{bio['name']}}</a> from <a href="https://vimeo.com/robothon">TypeMedia MA</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+        
+    </main> 
+    <script>
+        localStorage['active'] = "{{ student }}"
+    </script>
+    <script src="../globals.js"></script>
+    <script src="../detailMenu.js"></script>
+    <script src="../toggle_about.js"></script>
+</body>
+</html>

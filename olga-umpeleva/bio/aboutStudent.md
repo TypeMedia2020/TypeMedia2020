@@ -1,0 +1,2 @@
+Olga Umpeleva is a designer from Moscow, Russia. Before Type and Media she studied at the *Moscow University of Printing Arts.* She has worked with several studios including *ParaType,* *Brownfox* and *Art. Lebedev Studio.* Olga is a published type designer with fonts on *Google Fonts* and *MyFonts.*
+Olga likes to draw out of the world display typefaces, while keeping herself grounded with text typefaces. A designer of both Latin and Cyrillic letters, Olga is also a practiced stone carver, often visiting cemeteries to look at carved letters. Also fond of black horses.

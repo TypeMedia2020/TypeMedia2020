@@ -1,0 +1,1 @@
+Arnaud Chemin is a French type and graphic designer. He first studied print and graphic design in Paris, then moved to the Ésad Amiens (France) to specialize in new media interactions. He also attended Écal (Switzerland), dedicating his time and effort to type design. He worked briefly at Typofonderie and Black[Foundry] where he was involved in brand identity projects.

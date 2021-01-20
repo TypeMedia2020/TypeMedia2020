@@ -1,0 +1,5 @@
+*Cleft* explores the different characteristics that make up the texture of our text. From the internal to external qualities that help create the pattern and rhythm in the text we read. It is designed with two main styles that play with these concepts. A further experimental study into Arabic forms was done using the *Twinline* construction to investigate whether this unique construction would be viable as a multi-script system. 
+
+*Cleft Twinline* (A combination of the words twin and inline) focuses on the relationship between independent internal letters, and the external shapes that help to complete the letter forms. Deriving itself from inline forms, it challenges conventional models of inline construction.
+
+*Cleft Text* explores emphasis within a line of text. It is designed with a top-down tapering effect within each letter. This taper creates a strong horizontal emphasis along the x and cap heights, and a weaker presence along the base of each character, making it so the text feels heavier on top without falling over. *Cleft Text* has a width axis along with weight, in order to allow for economization of space. 

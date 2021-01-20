@@ -1,0 +1,2 @@
+Ruggero Magrì is an independent type designer and lettering artist from Italy.
+He obtained a BA in graphic design from NABA and attended TypeParis in 2018. After working as a type designer between Turin and Paris,  he attended TypeMedia in 2020. Both analog and digital, any potential application attracts Ruggero and pushes him to explore new expressive possibilities.
