@@ -102,11 +102,11 @@ const scrollCallback = (() =>
         }
 
         // abort any previously running timer
-        if (timer) clearTimeout(timer)
+        if (timer) clearTimeout(timer);
         // assign timed callback for when scrolling has ended
-        if (shouldSnap) timer = setTimeout(snap, scrollThreshold)
+        if (shouldSnap) timer = setTimeout(snap, scrollThreshold);
     }
-})()
+})();
 
 var isactive = true
 var isScrolling = false
